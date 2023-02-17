@@ -27,3 +27,7 @@ group by 1,2,3
 having total < 100
 order by total;
 
+select last_name, count(*) as cantidad from actor
+group by 1
+having cantidad > 2;
+
