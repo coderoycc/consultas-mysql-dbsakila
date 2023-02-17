@@ -33,4 +33,6 @@ from customer as c
 right join actor as a
 on c.last_name = a.last_name;
 -- Mantiene todos los valores de actor y los une si el apellido es igual con el de customer
+
+
  
