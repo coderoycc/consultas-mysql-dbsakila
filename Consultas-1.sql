@@ -24,6 +24,12 @@ address as a
 inner join city as c
 on a.city_id = c.city_id; 
 
+select r.rental_id, s.first_name
+from rental as r
+inner join staff as s
+on r.staff_id = s.staff_id;
+
+
 -- RIGTH JOIN Mantiene todos los valores de la segunda tabla y hace match por un campo con la primera tabla
 -- Los valores que hagan match tendrán ambos campos llenos y los demás seran campos nulos
 select 
@@ -35,4 +41,16 @@ on c.last_name = a.last_name;
 -- Mantiene todos los valores de actor y los une si el apellido es igual con el de customer
 
 
- 
+-- LEFT JOIN Mantiene todos los valores de la primera tabla y hace match por un campo con la segunda tabla
+select
+c.customer_id, c.first_name, c.last_name,
+a.actor_id, a.first_name, a.last_name
+from customer as c
+left join actor as a
+on c.last_name = a.last_name;
+
+select a.address, s.store_id
+from store as s
+left join address a
+on a.address_id = s.address_id;
+
