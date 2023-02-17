@@ -54,3 +54,20 @@ from store as s
 left join address a
 on a.address_id = s.address_id;
 
+
+
+-- Funciones SUM() devuelve el resultado de la suma de un solo campo
+select sum(amount) from payment;
+
+-- Funcion COUNT() devuelve la cantidad de un campo o de toda la tabla
+select count(*) from payment;
+select customer_id, count(customer_id) from payment group by customer_id;
+
+-- Funcion AVG() promedio
+select avg(amount) from payment;
+select avg(rental_duration) from film;
+
+-- Function MAX() y MIN()
+select max(rental_duration) from film;
+select min(rental_duration) from film;
+
