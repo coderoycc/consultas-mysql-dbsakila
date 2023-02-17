@@ -98,4 +98,4 @@ group by temp.customer_id;
 
 select * from clientes_pagos_mayor_prom;
 
-
+drop view clientes_pagos_mayor_prom; -- esto es para eliminar
